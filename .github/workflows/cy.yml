@@ -1,0 +1,26 @@
+name: Pipe
+
+on:
+  push:
+  pull_request:
+    branches:
+      - 'main'
+
+  schedule:
+    - cron: '0 12,15,18 * * 1-5'  
+
+jobs:
+  regression-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Project checkout
+        uses: actions/checkout@v4
+
+      - name: Installing dependencies
+        run: npm install
+
+      - name: Running the tests
+        uses: cypress-io/github-action@v5
+        env:
+          build: npm run build
+          start: npm run test

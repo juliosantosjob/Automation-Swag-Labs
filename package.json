@@ -1,0 +1,24 @@
+{
+  "name": "automation-exercise-tests",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "open": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "Julio Santos",
+  "license": "ISC",
+  "description": "Projeto de testes automatizados em site e API usando Cypress, Cucumber e JavaScript.",
+  "devDependencies": {
+    "cypress": "^14.5.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/**/step_definitions"
+  },
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-plugin-api": "^2.11.2"
+  }
+}
