@@ -23,4 +23,4 @@ jobs:
         uses: cypress-io/github-action@v5
         env:
           build: npm run build
-          start: npm run test
+          start: npm run byTag TAGS="@regression"

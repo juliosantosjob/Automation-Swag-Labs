@@ -4,7 +4,8 @@
   "main": "cypress.config.js",
   "scripts": {
     "test": "npx cypress run",
-    "open": "npx cypress open"
+    "open": "npx cypress open",
+    "byTag": "cypress run --env"
   },
   "keywords": [],
   "author": "Julio Santos",

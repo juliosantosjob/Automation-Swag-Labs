@@ -1,5 +1,6 @@
 # language:en
 
+@ui @regression
 Feature: Login de usuario
     Como um usuario
     Eu quero fazer login no sistema
@@ -8,10 +9,12 @@ Feature: Login de usuario
     Background:
         Given que o usuario esta na pagina de login
 
+    @loginSuccess
     Scenario: Login com sucesso
         When informa credenciais validas
         Then deve visualizar a pagina inicial logado
 
+    @invalidLogin
     Scenario Outline: Login com dados invalidos
         When ele informa o "<username>" e "<senha>"
         Then ele visualiza a seguinte mensagem de erro: "<mensagem>"
