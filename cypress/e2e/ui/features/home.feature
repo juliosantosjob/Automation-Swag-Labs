@@ -1,37 +1,37 @@
-# language:en
+# language:pt
 
-@ui @regression
-Feature: Funcionalidade Home
-  Como um usuário
-  Eu quero interagir com a Home
-  Para adicionar produtos, finalizar compras e validar o fluxo
+  @ui @regression
+  Funcionalidade: Funcionalidade Home
+    Como um usuário
+    Eu quero interagir com a Home
+    Para adicionar produtos, finalizar compras e validar o fluxo
 
-  Background:
-    Given o login com o usuario "standard_user"
+    Contexto:
+      Dado o login com o usuario "standard_user"
 
-  @viewProducts
-  Scenario: Visualiza lista de produtos apos login
-    Then a lista de produtos e exibida corretamente
+    @viewProducts
+    Cenario: Visualiza lista de produtos apos login
+      Entao a lista de produtos e exibida corretamente
 
-  @addProducts
-  Scenario: Adicionar produto ao carrinho
-    When ele adiciona o produto ao carrinho
-    And vai para a tela do carrinho
-    Then o produto aparece no carrinho
+    @addProducts
+    Cenario: Adicionar produto ao carrinho
+      Quando ele adiciona o produto ao carrinho
+      E vai para a tela do carrinho
+      Entao o produto aparece no carrinho
 
-  @removeProducts
-  Scenario: Remover produto do carrinho
-    When ele adiciona o produto ao carrinho
-    And vai para a tela do carrinho
-    And remove o produto do carrinho
-    Then o carrinho esta vazio
+    @removeProducts
+    Cenario: Remover produto do carrinho
+      Quando ele adiciona o produto ao carrinho
+      E vai para a tela do carrinho
+      E remove o produto do carrinho
+      Entao o carrinho esta vazio
 
-  @doPurchase
-  Scenario: Finalizar compra com sucesso
-    When ele adiciona o produto ao carrinho
-    And vai para a tela do carrinho
-    And faz o checkout
-    And preenche o formulario de usuario
-    And visualiza o resumo do pedido
-    And finaliza a compra
-    Then ele ve a mensagem "Thank you for your order!"
+    @doPurchase
+    Cenario: Finalizar compra com sucesso
+      Quando ele adiciona o produto ao carrinho
+      E vai para a tela do carrinho
+      E faz o checkout
+      E preenche o formulario de usuario
+      E visualiza o resumo do pedido
+      E finaliza a compra
+      Entao ele ve a mensagem "Thank you for your order!"

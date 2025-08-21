@@ -1,25 +1,25 @@
-# language:en
+# language:pt
 
 @ui @regression
-Feature: Login de usuario
+Funcionalidade: Login de usuario
     Como um usuario
     Eu quero fazer login no sistema
     Para acessar minhas funcionalidades
 
-    Background:
-        Given que o usuario esta na pagina de login
+    Contexto:
+        Dado que o usuario esta na pagina de login
 
     @loginSuccess
-    Scenario: Login com sucesso
-        When informa credenciais validas
-        Then deve visualizar a pagina inicial logado
+    Cenario: Login com sucesso
+        Quando informa credenciais validas
+        Entao deve visualizar a pagina inicial logado
 
     @invalidLogin
-    Scenario Outline: Login com dados invalidos
-        When ele informa o "<username>" e "<senha>"
-        Then ele visualiza a seguinte mensagem de erro: "<mensagem>"
+    Esquema do Cenario: Login com dados invalidos
+        Quando ele informa o "<username>" e "<senha>"
+        Entao ele visualiza a seguinte mensagem de erro: "<mensagem>"
 
-        Examples:
+        Exemplos:
             | username        | senha        | mensagem                                                                  |
             | invalid_user    | test_psw     | Epic sadface: Username and password do not match any user in this service |
             | valid_user      | invalid_psw  | Epic sadface: Username and password do not match any user in this service |
@@ -28,5 +28,5 @@ Feature: Login de usuario
             |                 |              | Epic sadface: Username is required                                        |
             | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.                       |
 
-    Scenario: Steps de suporte a autenticacao
-        Given o login com o usuario "standard_user"
+    Cenario: Steps de suporte a autenticacao
+        Dado o login com o usuario "standard_user"

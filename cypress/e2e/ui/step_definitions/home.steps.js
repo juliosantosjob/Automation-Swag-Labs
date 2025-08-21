@@ -1,4 +1,4 @@
-import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
+import { When, Then, And } from "cypress-cucumber-preprocessor/steps";
 
 import page from "../../../../pages-instance";
 import items from "../../../fixtures/itens";
@@ -21,11 +21,11 @@ And("remove o produto do carrinho", () => {
     page.home.removeProductFromCart(items.productList[0]);
 });
 
-Then("o produto aparece no carrinho", () => {
+And("o produto aparece no carrinho", () => {
     page.home.productsOnCart(items.productList[0]);
 });
 
-Then("o carrinho esta vazio", () => {
+And("o carrinho esta vazio", () => {
     page.home.cartIsEmpty();
 });
 
