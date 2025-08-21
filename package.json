@@ -3,15 +3,22 @@
   "version": "1.0.0",
   "main": "cypress.config.js",
   "scripts": {
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:history": "if exist allure-report/history move allure-report/history allure-results/history",
+    "allure:clear": "if exist allure-results rmdir /s /q allure-results && if exist allure-report rmdir /s /q allure-report",
+    "allure:test": "npm run allure:clear && npm run allure:generate && npm run test && npm run allure:history && npm run allure:open",
+    "allure:open": "npx allure serve allure-results",
     "test": "npx cypress run",
     "open": "npx cypress open",
-    "byTag": "cypress run --env"
+    "byTag": "npx cypress run --env"
   },
   "keywords": [],
   "author": "Julio Santos",
   "license": "ISC",
   "description": "Projeto de testes automatizados em site e API usando Cypress, Cucumber e JavaScript.",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-commandline": "^2.29.0",
     "cypress": "^14.5.4"
   },
   "cypress-cucumber-preprocessor": {
