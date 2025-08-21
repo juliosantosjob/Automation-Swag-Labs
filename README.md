@@ -43,6 +43,13 @@ npm install
 
 ## Execução dos testes
 
+Antes de executar os testes, crie um arquivo `.env` na raiz do projeto.
+- Na variável `HOST_WEB`, coloque a URL da aplicação [Sauce Demo](https://www.saucedemo.com)
+- Na variável `HOST_API`, coloque a URL da [API Trello](https://api.trello.com)
+Você pode usar o arquivo `.env.example`, que está na raiz do projeto, como referência.
+
+<br>
+
 Para executar os testes basta rodar o seguinte comando:
 
 ```
@@ -51,8 +58,7 @@ npm run test
 
 ## Relatório de testes
 
-Foi integrado ao projeto o Allure Report para gerar o relatório das execuções se quiser visualizar os testes executados na pipeline basta acessar este [link](https://juliosantosjob.github.io/Automation-Swag-Labs)
-. Para gerar o relatório de testes localmente basta rodar o seguinte comando:
+Foi integrado ao projeto o Allure Report para gerar o relatório das execuções. Se quiser visualizar os testes executados na pipeline pode acessar este [link](https://juliosantosjob.github.io/Automation-Swag-Labs). Para gerar o relatório de testes localmente basta rodar o seguinte comando:
 
 ```
 npm run allure:test

@@ -7,11 +7,15 @@ on:
       - 'main'
 
   schedule:
-    - cron: '0 12,15,18 * * 1-5'  
+      - cron: "0 12,20 * * 1-5"
 
 jobs:
   regression-test:
     runs-on: ubuntu-latest
+    env: 
+      HOST_WEB: ${{ secrets.HOST_WEB }}
+      HOST_API: ${{ secrets.HOST_API }}
+
     steps:
       - name: Project checkout
         uses: actions/checkout@v4

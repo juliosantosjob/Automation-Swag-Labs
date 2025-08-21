@@ -1,3 +1,5 @@
+const { HOST_API } = Cypress.env();
+
 /**
  * Comando exibir o conteúdo do campo “name” da estrutura “list”
  * 
@@ -7,6 +9,6 @@
 Cypress.Commands.add("getTrelloList", (actionId) => {
     cy.api({
         method: "GET",
-        url: `https://api.trello.com/1/actions/${actionId}`
+        url: `${HOST_API}/1/actions/${actionId}`
     })
 });

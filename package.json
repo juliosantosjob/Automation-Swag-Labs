@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "cypress-plugin-api": "^2.11.2"
+    "cypress-plugin-api": "^2.11.2",
+    "dotenv": "^16.4.5"
   }
 }

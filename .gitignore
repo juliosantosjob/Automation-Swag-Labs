@@ -3,3 +3,4 @@ downloads
 allure-results
 allure-report
 cypress/screenshots
+.env

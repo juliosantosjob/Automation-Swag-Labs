@@ -1,9 +1,10 @@
 import { ELM_LOGIN } from "../elements/login.elements.js";
+const { HOST_WEB } = Cypress.env();
 
 class LoginPage {
 
     openLoginPage() {
-        cy.visit("https://www.saucedemo.com");
+        cy.visit(HOST_WEB);
         cy.contains(ELM_LOGIN.field.loginLogo, ELM_LOGIN.text.title)
             .should("be.visible");
     }
