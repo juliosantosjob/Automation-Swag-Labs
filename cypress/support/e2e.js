@@ -7,6 +7,5 @@ import "@shelex/cypress-allure-plugin";
 afterEach(() => {
   if (Cypress.spec.relative.includes("ui")) {
     cy.screenshot();
-    cy.allure().attachment("Screenshot", `screenshots/**.png`, "image/png");
   }
 });
