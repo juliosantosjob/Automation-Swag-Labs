@@ -19,6 +19,7 @@ Tenha instalado em sua máquina as seguintes ferramentas:
 - [Node.js](https://nodejs.org/pt) <br>
 - [Visual Studio Code](https://code.visualstudio.com/download) <br>
 - [Git](https://git-scm.com/downloads) <br>
+- [Allure Report](https://allurereport.org/)
 
 ## Instalação
 
@@ -48,11 +49,20 @@ Para executar os testes basta rodar o seguinte comando:
 npm run test
 ```
 
+## Relatório de testes
+
+Foi integrado ao projeto o Allure Report para gerar o relatório das execuções se quiser visualizar os testes executados na pipeline basta acessar este [link](https://juliosantosjob.github.io/Automation-Swag-Labs)
+. Para gerar o relatório de testes localmente basta rodar o seguinte comando:
+
+```
+npm run allure:test
+```
+
 ## Considerações finais
 
 O projeto demonstra minhas habilidades em automação de testes com Cypress e pode ser expandido conforme a necessidade.
 
-### Contato
+## Contato
 
 Qualquer dúvida sobre o projeto, estou à disposição:
 
