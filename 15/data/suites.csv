@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Aug 21 23:32:25 GMT 2025","Thu Aug 21 23:32:26 GMT 2025","1133","","Funcionalidade Home","","","","Adicionar produto ao carrinho",""
+"passed","Thu Aug 21 23:32:22 GMT 2025","Thu Aug 21 23:32:24 GMT 2025","1252","","Funcionalidade Home","","","","Visualiza lista de produtos apos login",""
+"passed","Thu Aug 21 23:32:27 GMT 2025","Thu Aug 21 23:32:29 GMT 2025","1670","","Funcionalidade Home","","","","Finalizar compra com sucesso",""
+"passed","Thu Aug 21 23:32:26 GMT 2025","Thu Aug 21 23:32:27 GMT 2025","973","","Funcionalidade Home","","","","Remover produto do carrinho",""
+"passed","Thu Aug 21 23:32:16 GMT 2025","Thu Aug 21 23:32:16 GMT 2025","233","","Validação da API do Trello","","","","Obter o nome da lista de uma acao",""
+"passed","Thu Aug 21 23:32:36 GMT 2025","Thu Aug 21 23:32:37 GMT 2025","1103","","Login de usuario","","","","Login com sucesso",""
