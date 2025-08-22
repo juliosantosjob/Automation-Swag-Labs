@@ -17,4 +17,4 @@ function tasksRegistry(on) {
 
 module.exports = {
     tasksRegistry
-}
+};

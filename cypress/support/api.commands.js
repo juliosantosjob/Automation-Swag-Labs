@@ -10,5 +10,5 @@ Cypress.Commands.add("getTrelloList", (actionId) => {
     cy.api({
         method: "GET",
         url: `${HOST_API}/1/actions/${actionId}`
-    })
+    });
 });

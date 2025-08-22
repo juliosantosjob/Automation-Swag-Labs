@@ -5,7 +5,7 @@ import "cypress-plugin-api";
 import "@shelex/cypress-allure-plugin";
 
 afterEach(() => {
-  if (Cypress.spec.relative.includes("ui")) {
-    cy.screenshot();
-  }
+    if (Cypress.spec.relative.includes("ui")) {
+        cy.screenshot();
+    }
 });

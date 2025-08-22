@@ -23,6 +23,9 @@ jobs:
       - name: Installing dependencies
         run: npm install
 
+      - name: Verification with eslint 🔎
+        run: npm run lint
+
       - name: Running the tests
         uses: cypress-io/github-action@v5
         env:
