@@ -14,19 +14,19 @@ Funcionalidade: Login de usuario
         Quando informa credenciais validas
         Entao deve visualizar a pagina inicial logado
 
-    # @invalidLogin
-    # Esquema do Cenario: Login com dados invalidos
-    #     Quando ele informa o "<username>" e "<senha>"
-    #     Entao ele visualiza a seguinte mensagem de erro: "<mensagem>"
+    @invalidLogin
+    Esquema do Cenario: Login com dados invalidos
+        Quando ele informa o "<username>" e "<senha>"
+        Entao ele visualiza a seguinte mensagem de erro: "<mensagem>"
 
-    #     Exemplos:
-    #         | username        | senha        | mensagem                                                                  |
-    #         | invalid_user    | test_psw     | Epic sadface: Username and password do not match any user in this service |
-    #         | valid_user      | invalid_psw  | Epic sadface: Username and password do not match any user in this service |
-    #         |                 | test_psw     | Epic sadface: Username is required                                        |
-    #         | valid_user      |              | Epic sadface: Password is required                                        |
-    #         |                 |              | Epic sadface: Username is required                                        |
-    #         | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.                       |
+        Exemplos:
+            | username        | senha        | mensagem                                                                  |
+            | invalid_user    | test_psw     | Epic sadface: Username and password do not match any user in this service |
+            | valid_user      | invalid_psw  | Epic sadface: Username and password do not match any user in this service |
+            |                 | test_psw     | Epic sadface: Username is required                                        |
+            | valid_user      |              | Epic sadface: Password is required                                        |
+            |                 |              | Epic sadface: Username is required                                        |
+            | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.                       |
 
-    # Cenario: Steps de suporte a autenticacao
-    #     Dado o login com o usuario "standard_user"
+    Cenario: Steps de suporte a autenticacao
+        Dado o login com o usuario "standard_user"
