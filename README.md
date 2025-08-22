@@ -56,6 +56,10 @@ Para executar os testes basta rodar o seguinte comando:
 npm run test
 ```
 
+## Validação de código
+
+Executando o comando `npm run lint`, o projeto irá validar o código utilizando o [ESLint](https://eslint.org/).
+
 ## Relatório de testes
 
 Foi integrado ao projeto o Allure Report para gerar o relatório das execuções. Se quiser visualizar os testes executados na pipeline pode acessar este [link](https://juliosantosjob.github.io/Automation-Swag-Labs). Para gerar o relatório de testes localmente basta rodar o seguinte comando:
