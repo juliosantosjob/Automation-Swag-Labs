@@ -12,8 +12,8 @@ When("informa credenciais validas", () => {
     page.login.submit();
 });
 
-When("ele informa o {string} e {string}", (email, senha) => {
-    page.login.fillCredents({ username: email, password: senha });
+When("ele informa o {string} e {string}", (user, senha) => {
+    page.login.fillCredents({ username: user, password: senha });
     page.login.submit();
 });
 
