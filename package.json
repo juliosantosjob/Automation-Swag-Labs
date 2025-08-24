@@ -20,6 +20,7 @@
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.41.2",
     "allure-commandline": "^2.29.0",
+    "chai-json-schema": "^1.5.1",
     "cypress": "^14.5.4",
     "eslint": "^9.33.0",
     "eslint-plugin-cypress": "^5.1.1"

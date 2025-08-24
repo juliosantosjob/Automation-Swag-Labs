@@ -10,4 +10,5 @@
         Cenario: Obter o nome da lista de uma acao
             Dado que eu faca uma requisicao GET na api.trello passando o id "592f11060f95a3d3d46a987a"
             Entao o status code da resposta deve ser 200
+            E a resposta deve seguir o schema "trelloListSchema"
             E deve exibir o nome da lista no console
