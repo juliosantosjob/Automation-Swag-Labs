@@ -1,4 +1,4 @@
-import { ELM_LOGIN } from "../elements/login.elements.js";
+import { ELM_LOGIN } from "../selectors/login.css";
 const { HOST_WEB } = Cypress.env();
 
 class LoginPage {
