@@ -1,7 +1,7 @@
 # language:pt
 
   @ui @regression
-  Funcionalidade: Funcionalidade Home
+  Funcionalidade: Home do Site
     Como um usuário
     Eu quero interagir com a Home
     Para adicionar produtos, finalizar compras e validar o fluxo

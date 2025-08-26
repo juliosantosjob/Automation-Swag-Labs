@@ -1,22 +1,32 @@
 {
-  "name": "automation-exercise-tests",
+  "name": "automation-swag-labs",
   "version": "1.0.0",
   "main": "cypress.config.js",
+  "author": "Julio Santos",
+  "license": "ISC",
+  "description": "Projeto de testes automatizados em site e API usando Cypress, Cucumber e JavaScript.",
   "scripts": {
-    "lint": "npx eslint",
+    "lint": "eslint",
     "allure:generate": "allure generate allure-results --clean -o allure-report",
     "allure:history": "if exist allure-report/history move allure-report/history allure-results/history",
     "allure:clear": "if exist allure-results rmdir /s /q allure-results && if exist allure-report rmdir /s /q allure-report",
     "allure:test": "npm run allure:clear && npm run allure:generate && npm run test && npm run allure:history && npm run allure:open",
-    "allure:open": "npx allure serve allure-results",
-    "test": "npx cypress run",
-    "open": "npx cypress open",
-    "byTag": "npx cypress run --env"
+    "allure:open": "allure serve allure-results",
+    "test": "cypress run",
+    "open": "cypress open",
+    "byTag": "cypress run --env"
   },
-  "keywords": [],
-  "author": "Julio Santos",
-  "license": "ISC",
-  "description": "Projeto de testes automatizados em site e API usando Cypress, Cucumber e JavaScript.",
+  "keywords": [
+    "cypress",
+    "qa",
+    "automation",
+    "testing",
+    "allure"
+  ],
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/**/step_definitions"
+  },
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.41.2",
     "allure-commandline": "^2.29.0",
@@ -24,10 +34,6 @@
     "cypress": "^14.5.4",
     "eslint": "^9.33.0",
     "eslint-plugin-cypress": "^5.1.1"
-  },
-  "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": false,
-    "stepDefinitions": "cypress/e2e/**/step_definitions"
   },
   "dependencies": {
     "cypress-cucumber-preprocessor": "^4.3.1",

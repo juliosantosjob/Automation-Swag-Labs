@@ -1,5 +1,3 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-
 import page from "../../../../pages-instance";
 import users from "../../../fixtures/users";
 

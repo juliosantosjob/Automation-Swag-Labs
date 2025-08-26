@@ -1,12 +1,8 @@
-import { When, Then, And } from "cypress-cucumber-preprocessor/steps";
-
 import page from "../../../../pages-instance";
 import items from "../../../fixtures/itens";
 
 Then("a lista de produtos e exibida corretamente", () => {
-    items.productList.forEach((item) => {
-        page.home.displayProductList(item);
-    });
+    items.productList.forEach((item) => page.home.displayProductList(item));
 });
 
 When("ele adiciona o produto ao carrinho", () => {
@@ -34,8 +30,7 @@ And("faz o checkout", () => {
 });
 
 And("preenche o formulario de usuario", () => {
-    const usuario = Cypress.env("currentUser");
-    page.home.formUser(usuario);
+    page.home.formUser(Cypress.env("currentUser"));
 });
 
 And("visualiza o resumo do pedido", () => {

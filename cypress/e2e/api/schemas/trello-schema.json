@@ -1,8 +1,17 @@
 {
-
     "trelloListSchema" : {
     "type": "object",
-    "required": ["id", "idMemberCreator", "data", "appCreator", "type", "date", "limits", "display", "memberCreator"],
+    "required": [
+        "id",
+        "idMemberCreator",
+        "data",
+        "appCreator",
+        "type",
+        "date",
+        "limits",
+        "display",
+        "memberCreator"
+    ],
     "properties": {
         "id": { "type": "string" },
         "idMemberCreator": { "type": "string" },
