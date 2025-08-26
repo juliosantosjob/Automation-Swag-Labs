@@ -34,6 +34,9 @@ module.exports = [
             quotes: ["error", "double"],
             indent: ["error", 4],
             "max-len": ["error", 100],
+            "no-trailing-spaces": "error",
+            "no-multi-spaces": "error",
+            "spaced-comment": ["error", "always"],
         },
     },
 ];

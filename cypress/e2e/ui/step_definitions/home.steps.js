@@ -1,43 +1,52 @@
 import page from "../../../../pages-instance";
 import items from "../../../fixtures/itens";
 
+let randomProduct;
+
+const getRandomProduct = () => {
+    const randomIndex = Math.floor(Math.random() * items.productList.length);
+    return items.productList[randomIndex];
+};
+
+before(() => randomProduct = getRandomProduct());
+
 Then("a lista de produtos e exibida corretamente", () => {
     items.productList.forEach((item) => page.home.displayProductList(item));
 });
 
 When("ele adiciona o produto ao carrinho", () => {
-    page.home.addProductToCart(items.productList[0]);
+    page.home.addProductToCart(randomProduct);
 });
 
-And("vai para a tela do carrinho", () => {
+When("vai para a tela do carrinho", () => {
     page.home.goToCart();
 });
 
-And("remove o produto do carrinho", () => {
-    page.home.removeProductFromCart(items.productList[0]);
+When("remove o produto do carrinho", () => {
+    page.home.removeProductFromCart(randomProduct);
 });
 
-And("o produto aparece no carrinho", () => {
-    page.home.productsOnCart(items.productList[0]);
+When("o produto aparece no carrinho", () => {
+    page.home.productsOnCart(randomProduct);
 });
 
-And("o carrinho esta vazio", () => {
+Then("o carrinho esta vazio", () => {
     page.home.cartIsEmpty();
 });
 
-And("faz o checkout", () => {
+When("faz o checkout", () => {
     page.home.doCheckout();
 });
 
-And("preenche o formulario de usuario", () => {
+When("preenche o formulario de usuario", () => {
     page.home.formUser(Cypress.env("currentUser"));
 });
 
-And("visualiza o resumo do pedido", () => {
-    page.home.validadeCheckoutOverview(items.productList[0]);
+When("visualiza o resumo do pedido", () => {
+    page.home.validadeCheckoutOverview(randomProduct);
 });
 
-And("finaliza a compra", () => {
+Then("finaliza a compra", () => {
     page.home.finishPurchase();
 });
 

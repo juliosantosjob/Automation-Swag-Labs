@@ -14,7 +14,7 @@ module.exports = defineConfig({
 
             return config;
         },
-        env: { 
+        env: {
             allure: true,
             HOST_WEB: process.env.HOST_WEB,
             HOST_API: process.env.HOST_API

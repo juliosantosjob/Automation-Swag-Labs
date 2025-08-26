@@ -19,11 +19,6 @@ class LoginPage {
         cy.get(ELM_LOGIN.button.submit).click();
     }
 
-    doLogout() {
-        cy.get(ELM_LOGIN.button.burgerMenu).click();
-        cy.get(ELM_LOGIN.button.logout).click();
-    }
-
     atHome() {
         cy.contains(ELM_LOGIN.field.titleProducts, ELM_LOGIN.text.products)
             .should("be.visible");

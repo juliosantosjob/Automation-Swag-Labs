@@ -27,6 +27,11 @@ class HomePage {
             .click();
     }
 
+    cartIsEmpty() {
+        cy.get(ELM_HOME.field.cardBadge)
+            .should("not.exist");
+    }
+
     doCheckout() {
         cy.get(ELM_HOME.button.checkout).click();
     }
@@ -66,20 +71,6 @@ class HomePage {
         cy.contains(ELM_HOME.field.cartList, product)
             .should("exist")
             .and("be.visible");
-    }
-
-    cartIsEmpty() {
-        cy.get(ELM_HOME.field.cardBadge)
-            .should("not.exist");
-    }
-
-    doPurchase(product, userInfo) {
-        this.addProductToCart(product);
-        this.goToCart();
-        this.doCheckout();
-        this.formUser(userInfo);
-        this.validadeCheckoutOverview(product);
-        this.finishPurchase();
     }
 }
 
