@@ -11,13 +11,13 @@ chai.use(chaiJsonSchema);
 const isUiSpec = Cypress.spec.relative.includes("ui");
 
 before(() => {
-  if (isUiSpec) {
-    cy.task("deleteFolder", "cypress/screenshots");
-  }
+    if (isUiSpec) {
+        cy.task("deleteFolder", "cypress/screenshots");
+    }
 });
 
 afterEach(() => {
-  if (isUiSpec) {
-    cy.screenshot();
-  }
+    if (isUiSpec) {
+        cy.screenshot();
+    }
 });
