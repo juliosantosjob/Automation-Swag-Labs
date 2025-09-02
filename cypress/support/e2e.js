@@ -13,3 +13,5 @@ afterEach(() => {
         cy.screenshot();
     }
 });
+
+before(() => cy.task("deleteFolder", "cypress/screenshots"));
