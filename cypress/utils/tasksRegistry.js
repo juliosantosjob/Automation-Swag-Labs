@@ -7,7 +7,7 @@ function tasksRegistry(on) {
         deleteFolder(folderName) {
             const pathFolder = path.join(projectRoot, folderName);
 
-            if (fs.accessSync(pathFolder)) {
+            if (fs.existsSync(pathFolder)) {
                 fs.removeSync(pathFolder);
                 console.log(`Pasta ${folderName} deletada com sucesso!`);
             } else {
