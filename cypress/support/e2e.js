@@ -8,10 +8,16 @@ import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import chaiJsonSchema from "chai-json-schema";
 chai.use(chaiJsonSchema);
 
-afterEach(() => {
-    if (Cypress.spec.relative.includes("ui")) {
-        cy.screenshot();
-    }
+const isUiSpec = Cypress.spec.relative.includes("ui");
+
+before(() => {
+  if (isUiSpec) {
+    cy.task("deleteFolder", "cypress/screenshots");
+  }
 });
 
-before(() => cy.task("deleteFolder", "cypress/screenshots"));
+afterEach(() => {
+  if (isUiSpec) {
+    cy.screenshot();
+  }
+});
