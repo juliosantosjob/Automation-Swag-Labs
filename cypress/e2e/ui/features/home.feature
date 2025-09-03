@@ -11,7 +11,7 @@
 
     @viewProducts
     Cenario: Visualiza lista de produtos apos login
-      Entao a lista de produtos e exibida corretamente
+      Entao exibe a lista de produtos na home do site
 
     @addProducts
     Cenario: Adicionar produto ao carrinho
@@ -35,3 +35,10 @@
       E visualiza o resumo do pedido
       E finaliza a compra
       Entao ele ve a mensagem "Thank you for your order!"
+
+    @keepShopping  
+    Cenario: Adicionar produto ao carrinho e continuar comprando
+      Quando ele adiciona o produto ao carrinho
+      E vai para a tela do carrinho
+      E optar por continuar comprando
+      Entao deve visualizar a pagina inicial logado

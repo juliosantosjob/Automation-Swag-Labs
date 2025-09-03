@@ -47,6 +47,10 @@ class HomePage {
         cy.get(ELM_HOME.button.finish).click();
     }
 
+    continueShopping() {
+        cy.get(ELM_HOME.button.keepShopping).click();
+    }
+
     displayProductList(product) {
         cy.contains(ELM_HOME.field.inventoryItemName, product)
             .should("exist")

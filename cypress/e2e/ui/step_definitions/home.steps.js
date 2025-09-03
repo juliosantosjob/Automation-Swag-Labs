@@ -10,7 +10,7 @@ const getRandomProduct = () => {
 
 before(() => randomProduct = getRandomProduct());
 
-Then("a lista de produtos e exibida corretamente", () => {
+Then("exibe a lista de produtos na home do site", () => {
     items.productList.forEach((item) => page.home.displayProductList(item));
 });
 
@@ -44,6 +44,10 @@ When("preenche o formulario de usuario", () => {
 
 When("visualiza o resumo do pedido", () => {
     page.home.validadeCheckoutOverview(randomProduct);
+});
+
+When("optar por continuar comprando", () => {
+    page.home.continueShopping();
 });
 
 Then("finaliza a compra", () => {
